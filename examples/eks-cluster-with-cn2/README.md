@@ -1,4 +1,4 @@
-# EKS Cluster Deployment with new VPC
+# EKS Cluster Deployment with Juniper CN2 as CNI
 
 This example deploys the following Basic EKS Cluster with VPC
 
@@ -110,5 +110,5 @@ terraform destroy -auto-approve
 If any namespace gets stuck in terminating state while clean up run below command to clean up and run terraform destroy again
 
 ```sh
-
+NS=`kubectl get ns |grep Terminating | awk 'NR==1 {print $1}'` && kubectl get namespace "$NS" -o json   | tr -d "\n" | sed "s/\"finalizers\": \[[^]]\+\]/\"finalizers\": []/"   | kubectl replace --raw /api/v1/namespaces/$NS/finalize -f -
 ```
