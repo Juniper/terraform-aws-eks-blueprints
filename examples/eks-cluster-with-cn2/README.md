@@ -4,7 +4,9 @@ This example deploys the following Basic EKS Cluster with VPC
 
 - Creates a new sample VPC, 3 Private Subnets and 3 Public Subnets
 - Creates Internet gateway for Public Subnets and NAT Gateway for Private Subnets
-- Creates EKS Cluster Control plane with one managed node group
+- Creates EKS Cluster Control plane with one managed node group(desired nodes as 3)
+- Deploys Juniper CN2 as EKS cluste CNI
+
 
 For more details checkout [CN2](https://www.juniper.net/us/en/products/sdn-and-orchestration/contrail/cloud-native-contrail-networking.html) docs
 
@@ -88,6 +90,10 @@ This following command used to update the `kubeconfig` in your local machine whe
 
     kubectl get pods -n kube-system
 
+#### Step 9: List all the pods running in all namespace
+
+    kubectl get pods -A
+    
 ## Cleanup
 
 To clean up your environment, destroy the Terraform modules in reverse order.
