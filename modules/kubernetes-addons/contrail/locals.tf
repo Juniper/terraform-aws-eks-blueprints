@@ -1,7 +1,7 @@
 locals {
   default_helm_config = {
     name             = "contrail"
-    chart            = "aws-cn2"
+    chart            = "cn2-eks"
     repository       = "https://juniper.github.io/cn2-helm/"
     version          = "0.2.1"
     namespace        = "default"
