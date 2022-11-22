@@ -3,7 +3,7 @@ locals {
     name             = "contrail"
     chart            = "aws-cn2"
     repository       = "https://juniper.github.io/cn2-helm/"
-    version          = "1.2.0"
+    version          = "0.2.1"
     namespace        = "default"
     create_namespace = false
     description      = "cn2 helm Chart deployment configuration"
