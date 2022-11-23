@@ -1222,6 +1222,19 @@ variable "calico_helm_config" {
   default     = {}
 }
 
+#-----------Contrail ADDON-------------
+variable "enable_contrail" {
+  description = "Enable Contrail add-on"
+  type        = bool
+  default     = false
+}
+
+variable "contrail_helm_config" {
+  description = "Contrail add-on config"
+  type        = any
+  default     = {}
+}
+
 #-----------Kubecost ADDON-------------
 variable "enable_kubecost" {
   description = "Enable Kubecost add-on"

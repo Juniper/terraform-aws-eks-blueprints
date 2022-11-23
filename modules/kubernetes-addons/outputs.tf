@@ -108,6 +108,12 @@ output "calico" {
   value       = try(module.calico[0], null)
 }
 
+output "contrail" {
+  description = "Map of attributes of the Helm release and IRSA created"
+  value       = try(module.contrail[0], null)
+}
+
+
 output "cert_manager" {
   description = "Map of attributes of the Helm release and IRSA created"
   value       = try(module.cert_manager[0], null)
