@@ -99,7 +99,7 @@ This following command used to update the `kubeconfig` in your local machine whe
 ```sh
    kubectl -n kube-system delete ds aws-node
 ```
-#### Step 11: login to nodes remove file /etc/cni/net.d/10-aws.conflists and reboot the nodes
+#### Step 11: login to nodes remove file /etc/cni/net.d/10-aws.conflist and reboot the nodes
 
 There are various ways to login to nodes follow AWS [documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-connect-methods.html) for more information
 
