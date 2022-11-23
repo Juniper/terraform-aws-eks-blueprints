@@ -101,7 +101,7 @@ This following command used to update the `kubeconfig` in your local machine whe
 ```
 #### Step 11: login to nodes and remove file /etc/cni/net.d/10-aws.conflist
 
-There are various ways to login follow AWS document for more information : [doc](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-connect-methods.html)
+There are various ways to login to nodes follow AWS [documentation] for more information(https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-connect-methods.html)
 
     
 ## Cleanup
