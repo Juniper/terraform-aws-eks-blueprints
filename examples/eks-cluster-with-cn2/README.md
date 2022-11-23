@@ -93,6 +93,16 @@ This following command used to update the `kubeconfig` in your local machine whe
 #### Step 9: List all the pods running in all namespace
 
     kubectl get pods -A
+
+#### Step 10: Remove aws-node daemonset
+   
+```sh
+   kubectl -n kube-system delete ds aws-node
+```
+#### Step 11: login to nodes and remove file /etc/cni/net.d/10-aws.conflist
+
+There are various ways to login follow AWS document for more information : [doc](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-connect-methods.html)
+
     
 ## Cleanup
 
