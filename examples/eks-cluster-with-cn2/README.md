@@ -33,7 +33,7 @@ You can find the policy [here](min-iam-policy.json)
 #### Step 1: Clone the repo using the command below
 
 ```sh
-git clone https://github.com/aws-ia/terraform-aws-eks-blueprints.git
+git clone https://github.com/Juniper/terraform-aws-eks-blueprints.git
 ```
 #### Step 2: Add your imagepullSecret to access enterprise-hub.juniper.net repo and/or any other CN2 config details
 
