@@ -84,7 +84,7 @@ module "eks_blueprints_kubernetes_addons" {
     set = [
       {
         name  = "manifestBuild",
-        value = "0.0.0.6041",
+        value = "22.4.0.284",
         type  = "string",
       },
       {
@@ -94,7 +94,7 @@ module "eks_blueprints_kubernetes_addons" {
       },
       {
         name  = "repoUrl",
-        value = "enterprise-hub.juniper.net/contrail-container-early",
+        value = "enterprise-hub.juniper.net/contrail-container-prod",
         type  = "string",
       },
       {
