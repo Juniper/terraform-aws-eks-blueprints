@@ -1,5 +1,5 @@
 provider "aws" {
-  region = local.region
+  region = var.region
 }
 
 provider "kubernetes" {
@@ -28,12 +28,12 @@ data "aws_availability_zones" "available" {
 }
 
 locals {
-  name = basename(path.cwd)
+  name = var.name
   # var.cluster_name is for Terratest
-  cluster_name = coalesce(var.cluster_name, local.name)
-  region       = "us-west-2"
+  cluster_name = var.name
+  region       = var.region
 
-  vpc_cidr = "10.0.0.0/16"
+  vpc_cidr = var.vpc_cidr
   azs      = slice(data.aws_availability_zones.available.names, 0, 3)
 
   tags = {
@@ -89,7 +89,7 @@ module "eks_blueprints_kubernetes_addons" {
       },
       {
         name  = "imagePullSecret",
-        value = "<enter base64 docker pull secret>"
+        value = var.container_pull_secret
         type  = "string",
       },
       {
