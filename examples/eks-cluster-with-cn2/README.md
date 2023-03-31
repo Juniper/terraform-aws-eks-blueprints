@@ -104,14 +104,6 @@ Steps for Installing CN2 using helm chart
 helm repo add cn2 https://juniper.github.io/cn2-helm/
 helm install cn2eks cn2/cn2-eks --set imagePullSecret="" <provide base64 imagepullsecret>
 ```
-##### Step 2: Remove aws-node daemonset
-
-```sh
-   kubectl -n kube-system delete ds aws-node
-```
-#### Step 3: login to nodes remove file /etc/cni/net.d/10-aws.conflist and reboot the nodes
-
-There are various ways to login to nodes follow AWS [documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-connect-methods.html) for more information
     
 ## Cleanup
 
