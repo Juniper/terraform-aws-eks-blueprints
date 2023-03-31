@@ -94,15 +94,6 @@ This following command used to update the `kubeconfig` in your local machine whe
 
     kubectl get pods -A
 
-#### Step 10: Remove aws-node daemonset
-   
-```sh
-   kubectl -n kube-system delete ds aws-node
-```
-#### Step 11: login to nodes remove file /etc/cni/net.d/10-aws.conflist and reboot the nodes
-
-There are various ways to login to nodes follow AWS [documentation](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-connect-methods.html) for more information
-
 ## How to Deploy Juniper CN2 in BrownField(When you have AWS EKS running with AWS VPC CNI)
 
 Steps for Installing CN2 using helm chart

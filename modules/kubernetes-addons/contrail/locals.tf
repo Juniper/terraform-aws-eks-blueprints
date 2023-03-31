@@ -1,9 +1,11 @@
 locals {
+  repository = var.helm_config.repository
+  version = var.helm_config.version
   default_helm_config = {
     name             = "contrail"
     chart            = "cn2-eks"
-    repository       = "https://juniper.github.io/cn2-helm/"
-    version          = "0.2.1"
+    repository       = local.repository
+    verison          = local.version
     namespace        = "default"
     create_namespace = false
     description      = "cn2 helm Chart deployment configuration"

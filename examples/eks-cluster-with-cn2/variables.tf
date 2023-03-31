@@ -12,5 +12,12 @@ variable "region" {
 variable "vpc_cidr" {
   default = "10.0.0.0/16"
 }
+variable "repository"{
+ default = "https://juniper.github.io/cn2-helm/"
+}
+variable "chart_version"{
+ default = "23.1"
+}
+
 variable "container_pull_secret" {
 }
