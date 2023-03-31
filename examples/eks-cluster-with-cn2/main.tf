@@ -80,8 +80,8 @@ module "eks_blueprints_kubernetes_addons" {
   # EKS Managed Add-ons
   enable_contrail                      = true
     contrail_helm_config = {
-    repository = "https://juniper.github.io/cn2-helm/"
-    version    = "23.1"
+    repository = var.repository
+    version    = var.chart_version
     set = [
       {
         name  = "manifestBuild",
