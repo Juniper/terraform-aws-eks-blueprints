@@ -20,4 +20,5 @@ variable "chart_version"{
 }
 
 variable "container_pull_secret" {
+ default = "<ADD PULL SECRET HERE>"
 }
