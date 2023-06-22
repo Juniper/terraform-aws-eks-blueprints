@@ -35,11 +35,11 @@ You can find the policy [here](min-iam-policy.json)
 ```sh
 git clone https://github.com/Juniper/terraform-aws-eks-blueprints.git
 ```
-#### Step 2: Add your imagepullSecret to access enterprise-hub.juniper.net repo and/or any other CN2 config details
+#### Step 2: Replace the string <ADD PULL SECRET HERE> with your imagepullSecret to access enterprise-hub.juniper.net repo and/or any other CN2 config details in the variables file.
 
 ```sh
 cd examples/eks-cluster-with-cn2/
-vi main.tf
+vi variables.tf
 ```
 
 
