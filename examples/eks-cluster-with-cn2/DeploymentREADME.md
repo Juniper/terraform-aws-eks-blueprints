@@ -1,4 +1,4 @@
-# Cummarized Deployment guide
+# Summarized Deployment guide
 ### Setting up deployment VM environment 
 
 #### Prerequisites:
