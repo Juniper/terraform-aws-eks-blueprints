@@ -99,3 +99,9 @@
   * From within the terraform blueprints directory trigger the following commands
     * ``terraform destroy``   
  
+### Troubleshooting Guide
+* **Subnet deletion error**
+  * Log: Error: deleting EC2 Subnet (subnet-0c2ecdfb9aa92d807): DependencyViolation: The subnet 'subnet-0c2ecdfb9aa92d807' has dependencies and cannot be deleted.
+  * Problem overview: This issue is seen when there are AWS resources that are created out of band from what we create from Terraform. Terraform will not be able to delete any resources unless it is created using terraform.
+  * Solution: Login to AWS Console UI and check for any resources that got created within the subnet listed in the error log and delete it before starting the terraform again.
+* 
