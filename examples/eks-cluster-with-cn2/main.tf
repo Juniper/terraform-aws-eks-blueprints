@@ -63,7 +63,9 @@ module "eks_blueprints" {
       max_size        = 3
       desired_size    = 3
       subnet_ids      = module.vpc.private_subnets
+      additional_iam_policies = ["arn:aws:iam::aws:policy/AWSMarketplaceMeteringRegisterUsage"]
     }
+
   }
 
   tags = local.tags
@@ -78,7 +80,7 @@ module "eks_blueprints_kubernetes_addons" {
   eks_cluster_version  = module.eks_blueprints.eks_cluster_version
 
   # EKS Managed Add-ons
-  enable_contrail                      = true
+  enable_contrail                      = false
     contrail_helm_config = {
     repository = var.repository
     version    = var.chart_version
